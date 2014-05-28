@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'main#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +55,13 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # Whitelist Routes for AngularJS
+  get '/home', to: 'main#index'
+  get '/menu', to: 'main#index'
+  get '/menu/:type', to: 'main#index'
+  get '/locations', to: 'main#index'
+  get '/locations/:store', to: 'main#index'
+  get '/specials', to: 'main#index'
+  
 end

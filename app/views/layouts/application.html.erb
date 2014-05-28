@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="elCocoLocoApp">
 <head>
-  <title>Elcocoloco</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>El Coco Loco</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ui-view>
+  <header>
+  </header>
 
 <%= yield %>
+<%= javascript_include_tag 'application' %>
+
+  <footer>
+  </footer>
 
 </body>
 </html>
