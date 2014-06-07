@@ -1,0 +1,13 @@
+<div class="container">
+  <!-- Menu Categories -->
+  <div class="row">
+    <div ng-repeat="category in menuCategories" class="col-sm-2">
+      <a class="thumbnail menuItem" ui-sref=".type({type: category})">
+        <span class="flaticon-{{category}}"></span><br />
+        <span>{{category}}</span>
+      </a>
+    </div>
+  </div>
+
+  <span ui-view></span>
+</div>

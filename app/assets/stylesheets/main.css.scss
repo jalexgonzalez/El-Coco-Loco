@@ -1,3 +1,81 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding-top: 20px;
+  padding-bottom: 100px;
+  background-color: $coco-white;
+  font-family: 'Yanone Kaffeesatz','Helvetica',Arial,sans-serif;
+  font-size: 20px;
+}
+
+header {
+  nav {
+    background-color: $mamey !important;
+
+    a {
+      color: $coco-white !important;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+// Carousel Styling
+.carousel-wrapper {
+  height: 450px !important;
+
+  .carousel {
+    height: inherit;
+  }
+
+  .carousel-inner {
+    height: inherit;
+
+    .item {
+      height: inherit;
+    }
+
+    $countries: ('cuba', 'colombia', 'venezuela', 'nicaragua');
+    @each $country in $countries {
+      .#{$country} {
+        background-image: url(asset-path('#{$country}.jpg', image)) !important;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        width: inherit;
+        height: inherit;
+      }
+    }
+  }
+}
+
+// Highlights for homepage styling
+.highlights-wrapper {
+  margin-top: 20px;
+  padding: 0px 12px;
+  box-sizing: border-box !important;
+
+  .highlight {
+    height: 160px;
+    background: $coco-green;
+    background-clip: content-box;
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  	box-sizing: border-box;         /* Opera/IE 8+ */
+
+    padding: 0px 3px !important;
+  }
+}
+
+
+// Menu Top Menu Styling
+.menuItem {
+  padding-top: 70px;
+  background: transparent;
+  text-align: center;
+
+  $categories: ('pork', 'beef', 'chicken', 'fish', 'sandwich', 'juice', 'helado');
+}

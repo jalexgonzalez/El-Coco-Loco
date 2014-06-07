@@ -18,7 +18,7 @@ window.elCocoLocoApp = angular.module('elCocoLocoApp',
         )
         .state('menu.type',
           url: '/:type',
-          templateUrl: '/templates/menu'  # Make own template
+          templateUrl: '/templates/menu.type'  # Make own template
           controller: 'MenuTypeCtrl'
         )
 
@@ -30,7 +30,7 @@ window.elCocoLocoApp = angular.module('elCocoLocoApp',
         )
         .state('locations.store',
           url: '/:store'
-          templateUrl: '/templates/locations'  # Make own template
+          templateUrl: '/templates/locations.store'  # Make own template
           controller: 'StoreCtrl'
         )
 
@@ -41,7 +41,7 @@ window.elCocoLocoApp = angular.module('elCocoLocoApp',
           controller: 'SpecialsCtrl'
         )
 
-        
+
         ###############################################
         # Admin States - need to make this abstract
         # Add login, logout, and editting routes later

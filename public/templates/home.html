@@ -1,0 +1,20 @@
+<div class="container">
+  <!-- Carousel for Images -->
+  <div class="carousel-wrapper">
+    <carousel interval="slideInterval">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <div class="{{slide.name}}"></div>
+      </slide>
+    </carousel>
+  </div>
+
+</div>
+
+<div class="container">
+  <!-- Highlighted Items -->
+  <div class="row highlights-wrapper">
+    <div ng-repeat="item in highlights" class="col-md-3 highlight">
+      <a><h1>{{item}}</h1></a>
+    </div>
+  </div>
+</div>
