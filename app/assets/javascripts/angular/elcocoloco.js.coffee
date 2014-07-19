@@ -5,7 +5,7 @@ window.elCocoLocoApp = angular.module('elCocoLocoApp',
       $stateProvider
         # States for El Coco Loco
         .state('home',
-          url: '/home'
+          url: '/'
           templateUrl: '/templates/home'
           controller: 'HomeCtrl'
         )
@@ -53,9 +53,20 @@ window.elCocoLocoApp = angular.module('elCocoLocoApp',
         )
 
       $locationProvider.html5Mode(true)      # Allows hashtag routing
-      $urlRouterProvider.otherwise('/home')
+      $urlRouterProvider.otherwise('/')
   ])
 
   .run(['$rootScope', ($rootScope) ->
     elCocoLocoApp.apiPrefix = '/api/v1'  # Global api route
+
+    $(document).on('click.nav','.navbar-collapse.in', (e) ->
+      if $(e.target).is('a') or $(e.target).is('button')
+        $(this).collapse('hide')
+    )
+
+    $(document).on('click.nav','.navbar-brand', () ->
+      navbar_collapse = $('.navbar-collapse')
+      if navbar_collapse.is(':visible')
+          navbar_collapse.collapse('hide')
+    )
   ])

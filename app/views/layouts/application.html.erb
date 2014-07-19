@@ -8,36 +8,39 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="elCocoLocoApp">
-  <div class="container">
-  <header>
-    <nav class="navbar" role="navbar">
-      <div class="navbar-header">
+  <header class="container-fluid">
+    <nav class="navbar navbar-default" role="navbar">
+      <div class="navbar-header visible-xs">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#cocoNav">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" ui-sref="home">El Coco Loco</a>
+        <a class="navbar-brand logo mobile visible-xs-block" ui-sref="home"></a>
       </div>
+
+      <a class="navbar-brand center-brand logo hidden-xs" ui-sref="home"></a>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="cocoNav">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-left">
           <li><a ui-sref="menu">Menu</a></li>
-          <li><a ui-sref="about">About</a></li>
+          <li><a ui-sref="menu">About</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
           <li><a ui-sref="locations">Locations</a></li>
           <li><a ui-sref="menu">Language</a></li>
         </ul>
       </div>
     </nav>
   </header>
-</div>
 
 <%= yield %>
 <%= javascript_include_tag 'application' %>
 
-  <footer>
+  <footer class="container-fluid">
   </footer>
 
 </body>

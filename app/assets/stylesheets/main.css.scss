@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  padding-top: 20px;
+  padding-top: 70px;
   padding-bottom: 100px;
   background-color: $coco-white;
   font-family: 'Yanone Kaffeesatz','Helvetica',Arial,sans-serif;
@@ -10,12 +10,59 @@ body {
 }
 
 header {
-  nav {
+  nav, .navbar-default {
     background-color: $mamey !important;
 
     a {
       color: $coco-white !important;
       text-transform: uppercase;
+    }
+
+    button.navbar-toggle {
+      background-color : $mamey;
+      border: none;
+
+      &:hover {
+        background-color: inherit;
+      }
+
+      .icon-bar{
+        background-color: $coco-white !important;
+      }
+    }
+
+    .center-brand {
+      position: absolute;
+      width: 50%;
+      left: 25%;
+      text-align: center;
+      margin: auto;
+    }
+
+    .navbar-left {
+      margin-left: -15px !important; // makes it so both sides menu aligned
+    }
+
+    .logo {
+      background-image: url(asset-path('logo.png', image)) !important;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 260px 164px;
+      overflow: visible;
+      z-index: 1000;
+      height: 190px;
+      top: -65px;
+
+      &.mobile {
+        width: 160px;
+        background-position: left center;
+        background-size: 120px 75px !important;
+        overflow: visible !important;
+        z-index: 1000;
+        height: 75px !important;
+        top: -15px;
+        position: absolute;
+      }
     }
   }
 }
@@ -66,16 +113,26 @@ header {
   	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
   	box-sizing: border-box;         /* Opera/IE 8+ */
 
-    padding: 0px 3px !important;
+    padding: 0px 2px !important;
   }
 }
 
 
 // Menu Top Menu Styling
 .menuItem {
-  padding-top: 70px;
   background: transparent;
   text-align: center;
+  display: block;
+  height: inherit;
+  padding: 4px;
 
   $categories: ('pork', 'beef', 'chicken', 'fish', 'sandwich', 'juice', 'helado');
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    font-size: 50px;
+  }
 }
