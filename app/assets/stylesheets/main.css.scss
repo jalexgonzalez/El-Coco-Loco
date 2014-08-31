@@ -1,0 +1,176 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  background-color: $coco-white;
+  font-family: 'Yanone Kaffeesatz','Helvetica',Arial,sans-serif;
+  font-size: 20px;
+}
+
+header {
+  nav, .navbar-default {
+    background-color: $mamey !important;
+
+    a {
+      color: $coco-white !important;
+      text-transform: uppercase;
+    }
+
+    button.navbar-toggle {
+      background-color : $mamey;
+      border: none;
+
+      &:hover {
+        background-color: inherit;
+      }
+
+      .icon-bar{
+        background-color: $coco-white !important;
+      }
+    }
+
+    .center-brand {
+      position: absolute;
+      width: 50%;
+      left: 25%;
+      text-align: center;
+      margin: auto;
+    }
+
+    .navbar-left {
+      margin-left: -15px !important; // makes it so both sides menu aligned
+    }
+
+    .logo {
+      background-image: url(asset-path('logo.png', image)) !important;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 260px 164px;
+      overflow: visible;
+      z-index: 1000;
+      height: 190px;
+      top: -65px;
+
+      &.mobile {
+        width: 160px;
+        background-position: left center;
+        background-size: 120px 75px !important;
+        overflow: visible !important;
+        z-index: 1000;
+        height: 75px !important;
+        top: -15px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+
+// Carousel Styling
+.carousel-wrapper {
+  height: 450px !important;
+
+  .carousel {
+    height: inherit;
+  }
+
+  .carousel-inner {
+    height: inherit;
+
+    .item {
+      height: inherit;
+    }
+
+    $countries: ('cuba', 'colombia', 'venezuela', 'nicaragua');
+    @each $country in $countries {
+      .#{$country} {
+        background-image: url(asset-path('#{$country}.jpg', image)) !important;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        width: inherit;
+        height: inherit;
+      }
+    }
+  }
+}
+
+// Highlights for homepage styling
+.highlights-wrapper {
+  margin-top: 20px;
+  padding: 0px 12px;
+  box-sizing: border-box !important;
+
+  .highlight {
+    height: 160px;
+    background: $coco-green;
+    background-clip: content-box;
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  	box-sizing: border-box;         /* Opera/IE 8+ */
+
+    padding: 0px 2px !important;
+  }
+}
+
+
+// Menu Top Menu Styling
+.menuItem {
+  background: transparent;
+  text-align: center;
+  display: block;
+  height: inherit;
+  padding: 4px;
+
+  $categories: ('pork', 'beef', 'chicken', 'fish', 'sandwich', 'juice', 'helado');
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    font-size: 50px;
+  }
+}
+
+
+// Map styling
+.map {
+  height: 600px;
+  img {
+    max-width: none;
+  }
+}
+
+
+// Store Profile Styling
+.store-profile {
+  .cover-photo {
+    background: #eee;
+    height: 400px;
+    margin: auto 0 20px 0;
+    position: relative;
+    width: 100%;
+
+    .address-info {
+      background: rgba(0, 0, 0, .55);
+      color: $coco-white;
+      max-width: 40%;
+      padding: 12px 12px 12px 20px;
+      position: absolute;
+      bottom: 20%;
+
+      h1 {
+        margin-top: 0;
+      }
+
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

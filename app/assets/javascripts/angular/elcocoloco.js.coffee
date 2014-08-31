@@ -1,74 +1,76 @@
-window.yaleImsApp = angular.module('yaleImsApp', 
-  ['ngResource', 'ui.router', 'ngStorage', 'ui.bootstrap'])
+window.elCocoLocoApp = angular.module('elCocoLocoApp',
+  ['ngResource', 'ui.router', 'ngStorage', 'ui.bootstrap', 'AngularGM'])
   .config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
     ($stateProvider, $locationProvider, $urlRouterProvider) ->
       $stateProvider
-        # Authentication and Static States
+        # States for El Coco Loco
         .state('home',
-          url: '/home'
+          url: '/'
           templateUrl: '/templates/home'
           controller: 'HomeCtrl'
         )
-        .state('profile',
-          url: '/profile',
-          templateUrl: '/templates/profile'
-          controller: 'ProfileCtrl'
+        # State for about
+        .state('about',
+          url: '/about',
+          templateUrl: '/templates/about'
         )
-        .state('player',
-          url: '/profile/:player',
-          templateUrl: '/templates/player'
-          controller: 'PlayerProfileCtrl'
+        # State for menus, all and selected
+        .state('menu',
+          url: '/menu',
+          templateUrl: '/templates/menu'
+          controller: 'MenuCtrl'
         )
-        .state('newsfeed',
-          url: '/newsfeed',
-          templateUrl: '/templates/newsfeed'
-          controller: 'NewsfeedCtrl'
+        .state('menu.type',
+          url: '/:type',
+          templateUrl: '/templates/menu.type'  # Make own template
+          controller: 'MenuTypeCtrl'
         )
-        # Record States
-        .state('leaderboard',
-          url: '/leaderboard'
-          templateUrl: '/templates/leaderboard'
-          controller: 'LeaderboardCtrl'
+
+        # State for locations, all and selected
+        .state('locations',
+          url: '/locations',
+          templateUrl: '/templates/locations'
+          controller: 'LocationCtrl'
         )
-        
-        # Access Controls States
-        .state('sport',
-          url: '/sport'
-          templateUrl: '/templates/sport'
-          controller: 'SportCtrl'
+        .state('locations.store',
+          url: '/:store'
+          templateUrl: '/templates/locations.store'  # Make own template
+          #controller: 'StoreCtrl'
         )
-        .state('sportSelected'
-          url: '^/sport/:sport'
-          templateUrl: '/templates/sport'
-          controller: 'SportSelectedCtrl'        )
-        .state('college',
-          url: '/college/:college'
-          templateUrl: '/templates/college'
-          controller: 'CollegeCtrl'
+
+        # Specials
+        .state('specials',
+          url: '/specials',
+          templateUrl: '/templates/specials'
+          controller: 'SpecialsCtrl'
         )
-        .state('college.sport',
-          url: '/:sport'
-          templateUrl: '/templates/college'
-          controller: 'CollegeCtrl'
-        )
+
+
+        ###############################################
+        # Admin States - need to make this abstract
+        # Add login, logout, and editting routes later
+        ###############################################
         .state('admin',
           url: '/admin'
           templateUrl: '/templates/admin'
           controller: 'AdminCtrl'
         )
-        .state('logout',
-          url: '/logout'
-          controller: 'LogoutCtrl'
-        )
-      $locationProvider.html5Mode(true)
-      $urlRouterProvider.otherwise('/home')
+
+      $locationProvider.html5Mode(true)      # Allows hashtag routing
+      $urlRouterProvider.otherwise('/')
   ])
 
-  .run(['$rootScope', 'Student', 'ParseService', ($rootScope, Student, ParseService) ->
-    yaleImsApp.apiPrefix = '/api/v1'
-    Student.get({}, (response) ->
-      $rootScope.student = response.person
-      console.log($rootScope.student)
-      ParseService.addPerson(response.person.id, response.person.name, response.person.collegeurl, response.person.year);
+  .run(['$rootScope', ($rootScope) ->
+    elCocoLocoApp.apiPrefix = '/api/v1'  # Global api route
+
+    $(document).on('click.nav','.navbar-collapse.in', (e) ->
+      if $(e.target).is('a') or $(e.target).is('button')
+        $(this).collapse('hide')
+    )
+
+    $(document).on('click.nav','.navbar-brand', () ->
+      navbar_collapse = $('.navbar-collapse')
+      if navbar_collapse.is(':visible')
+          navbar_collapse.collapse('hide')
     )
   ])

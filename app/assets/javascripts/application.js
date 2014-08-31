@@ -12,13 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require angular
 //= require angular-resource
 //= require angular-ui-router.min
 //= require angular-ui-bootstrap-tpls
 //= require ui.bootstrap
-//= require bootstrap
 //= require ngstorage.min
-//= require parse.min
-//= require angular/yaleims
+//= require AngularGM
+//= require ngAutocomplete
+//= require angular/elcocoloco
 //= require_tree ./angular
