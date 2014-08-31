@@ -1,12 +1,18 @@
 <div class="container-fluid">
   <!-- Menu Categories -->
   <div class="row">
-    <div ng-repeat="category in menuCategories" class="col-xs-4 col-sm-3">
-      <a class="menuItem" ui-sref=".type({type: category})">
-        <span class="menu-icon flaticon-{{category}}"></span><br />
-        <span>{{category}}</span>
+    
+    <div class="col-xs-4 col-sm-3">
+      <a class="menuItem" ui-sref="menu">
+        <span class="menu-icon flaticon-all"></span><br />
+        <span>all</span>
       </a>
     </div>
+
+    <div ng-repeat="category in menuCategories" class="col-xs-4 col-sm-3">
+      <menu-item caption="{{category}}" category="{{category}}" icon="{{category}}"></menu-item>
+    </div>
+
   </div>
 
   <span ui-view></span>

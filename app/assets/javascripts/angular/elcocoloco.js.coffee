@@ -9,7 +9,11 @@ window.elCocoLocoApp = angular.module('elCocoLocoApp',
           templateUrl: '/templates/home'
           controller: 'HomeCtrl'
         )
-
+        # State for about
+        .state('about',
+          url: '/about',
+          templateUrl: '/templates/about'
+        )
         # State for menus, all and selected
         .state('menu',
           url: '/menu',
