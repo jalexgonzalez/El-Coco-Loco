@@ -7,6 +7,6 @@ angular.module('elCocoLocoApp')
 			caption: '@',
 			category: '@'
 		},
-		templateUrl: 'templates/directives/menu-item.html'
+		templateUrl: '/templates/directives/menu-item.html'
 	};
 }]);

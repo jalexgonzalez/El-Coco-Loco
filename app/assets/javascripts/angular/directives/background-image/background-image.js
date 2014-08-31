@@ -1,6 +1,6 @@
 angular.module('elCocoLocoApp')
 .directive('backgroundImage', [function() {
-	var link = function(scope, attrs, element) {
+	var link = function(scope, element, attrs) {
 		attrs.$observe('backgroundImg', function(value) {
             element.css({
                 'background-image': 'url(' + value +')',
