@@ -14,6 +14,11 @@ window.elCocoLocoApp = angular.module('elCocoLocoApp',
           url: '/about',
           templateUrl: '/templates/about'
         )
+        .state('login',
+          url: '/login'
+          templateUrl: '/templates/login'
+          #controller: 'HomeCtrl'
+        )
         # State for menus, all and selected
         .state('menu',
           url: '/menu',

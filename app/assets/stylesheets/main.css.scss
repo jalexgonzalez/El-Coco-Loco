@@ -121,6 +121,7 @@ header {
 // Menu Top Menu Styling
 .menuItem {
   background: transparent;
+  color: $coco-link-green;
   text-align: center;
   display: block;
   height: inherit;
@@ -129,6 +130,7 @@ header {
   $categories: ('pork', 'beef', 'chicken', 'fish', 'sandwich', 'juice', 'helado');
 
   &:hover {
+    color: $coco-hover-green;
     text-decoration: none;
   }
 
@@ -171,6 +173,18 @@ header {
       p:last-of-type {
         margin-bottom: 0;
       }
+    }
+  }
+}
+
+
+// Login Form Styling
+.login {
+  .login-form {
+    margin: 80px auto;
+    width: 50%;
+    input {
+      margin: 10px auto;
     }
   }
 }

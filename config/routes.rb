@@ -59,10 +59,12 @@ Rails.application.routes.draw do
   # Whitelist Routes for AngularJS
   get '/home', to: 'main#index'
   get '/about', to: 'main#index'
+  get '/admin/', to: 'main#index'
   get '/menu', to: 'main#index'
   get '/menu/:type', to: 'main#index'
   get '/locations', to: 'main#index'
   get '/locations/:store', to: 'main#index'
+  get '/login', to: 'main#index'
   get '/specials', to: 'main#index'
   
 end
