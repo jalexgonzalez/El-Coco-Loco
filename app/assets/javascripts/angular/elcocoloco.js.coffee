@@ -1,5 +1,5 @@
 window.elCocoLocoApp = angular.module('elCocoLocoApp',
-  ['ngResource', 'ui.router', 'ngStorage', 'ui.bootstrap'])
+  ['ngResource', 'ui.router', 'ngStorage', 'ui.bootstrap', 'AngularGM'])
   .config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
     ($stateProvider, $locationProvider, $urlRouterProvider) ->
       $stateProvider
@@ -31,7 +31,7 @@ window.elCocoLocoApp = angular.module('elCocoLocoApp',
         .state('locations.store',
           url: '/:store'
           templateUrl: '/templates/locations.store'  # Make own template
-          controller: 'StoreCtrl'
+          #controller: 'StoreCtrl'
         )
 
         # Specials

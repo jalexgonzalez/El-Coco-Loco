@@ -19,5 +19,7 @@
 //= require angular-ui-bootstrap-tpls
 //= require ui.bootstrap
 //= require ngstorage.min
+//= require AngularGM
+//= require ngAutocomplete
 //= require angular/elcocoloco
 //= require_tree ./angular

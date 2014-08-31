@@ -1,0 +1,14 @@
+<div class="store">
+  <a ui-sref="locations.store"><h2>{{name}}</h2></a>
+  <p class="address">
+    <span class="specific">{{addr.number}} {{addr.street}}</span>
+    <span class="general">{{addr.city}}, {{addr.state}} {{addr.zip}}</span>
+  </p>
+
+  <p class="hours">
+    <span ng-repeat="day in hours track by day.name">{{day.day}} {{day.open}} AM - {{day.close}} PM</span>
+  </p>
+
+  <p class="contact">{{contact}}</p>
+  <div ng-transclude></div>
+</div>

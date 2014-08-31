@@ -1,0 +1,17 @@
+<div ui-view class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <store ng-repeat="location in locations"
+        addr="location.address"
+        hours="location.hours"
+        name="{{location.name}}"
+        contact="{{location.contact}}">
+        <hr class="featurette-divider" ng-if="!$last" />
+        </store>
+    </div>
+    <div class="col-md-8">
+      <gm-map gm-map-id="'elCocoLocoMap'" class="map">
+        </gm-map>
+    </div>
+  </div>
+</div>
