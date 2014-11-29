@@ -1,6 +1,6 @@
 $mamey: rgb(244, 130, 85);
 $coco-white: rgb(255, 255, 249);
-$coco-green: rgb(163, 206, 75);
+$coco-green: lighten(#167b38, 10);
 $coco-link-green: darken($coco-green, 5);
 $coco-hover-green: darken($coco-link-green, 5);
 $coco-blue: rgb(5, 163, 211);

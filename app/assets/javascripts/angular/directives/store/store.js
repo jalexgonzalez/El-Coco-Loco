@@ -7,10 +7,11 @@ angular.module('elCocoLocoApp')
       restrict: 'E',
       replace: true,
       scope: {
-          name: '@',
-          addr: '=',
-          hours: '=',
-          contact: '@'
+          // name: '@',
+          // addr: '=',
+          // hours: '=',
+          // contact: '@'
+          store: '='
       },
       transclude: true
     };

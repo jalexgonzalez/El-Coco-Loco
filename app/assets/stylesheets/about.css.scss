@@ -1,0 +1,16 @@
+.about-container {
+  .sidebar-image {
+    background-color: #ccc;
+    background-image: url(asset-path('pig.jpg', image)) !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+  }
+
+  p {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+  }
+}

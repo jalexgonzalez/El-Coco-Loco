@@ -1,14 +1,20 @@
-<div class="store">
-  <a ui-sref="locations.store"><h2>{{name}}</h2></a>
+<div class="store-wrapper">
+<div class="store" ng-class="{'selected-store': store.selected}">
+  <a ui-sref="locations.store"><h2>{{store.name}}</h2></a>
   <p class="address">
-    <span class="specific">{{addr.number}} {{addr.street}}</span>
-    <span class="general">{{addr.city}}, {{addr.state}} {{addr.zip}}</span>
+    <span class="specific">{{store.address.number}} {{store.address.street}}</span>
+    <span class="general">{{store.address.city}}, {{store.address.state}} {{store.address.zip}}</span>
   </p>
 
   <p class="hours">
-    <span ng-repeat="day in hours track by day.name">{{day.day}} {{day.open}} AM - {{day.close}} PM</span>
+    <span ng-repeat="day in store.hours track by day.name">{{day.open}} AM - {{day.close}} PM Daily</span>
   </p>
 
-  <p class="contact">{{contact}}</p>
-  <div ng-transclude></div>
+  <p class="contact">{{store.contact}}</p>
+
+  <a class="btn btn-info"
+    target="_blank"
+    href="https://maps.google.com?daddr={{store.address.number}}+{{store.address.street}}+{{store.address.city}}+{{store.address.state}}+{{store.address.zip}}">Get Directions</a>
+</div>
+<div ng-transclude></div>
 </div>

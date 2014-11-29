@@ -1,18 +1,33 @@
 'use strict';
 angular.module('elCocoLocoApp')
   .controller('LocationCtrl', ['$scope', function($scope) {
-    // Make a service that gets the slides
-    // Rewrite this later
+
+    $scope.options = {
+      map: {
+        center: new google.maps.LatLng(25.72, -80.33),
+        zoom: 12,
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+      },
+      notselected: {
+        icon: 'https://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png',
+      },
+      selected: {
+        icon: 'https://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png',
+      }
+    };
+
     $scope.locations = [
       {
         name: 'Bird Road',
         address: {
-          number: 656,
+          number: 6420,
           street: 'Bird Rd.',
           city: 'Miami',
           state: 'FL',
-          zip: 33134
+          zip: 33155
         },
+        latitude: 25.73328,
+        longitude: -80.29913899999997,
         hours: [
           {
             day: 'Monday',
@@ -20,17 +35,19 @@ angular.module('elCocoLocoApp')
             close: '9'
           }
         ],
-        contact: '786-564-4956'
+        contact: '786-367-4264'
       },
       {
-        name: 'Flagler Road',
+        name: 'Laguna Plaza',
         address: {
-          number: 656,
-          street: 'Flagler Rd.',
+          number: 70,
+          street: 'NW 107 Ave.',
           city: 'Miami',
           state: 'FL',
-          zip: 33134
+          zip: 33174
         },
+        latitude: 25.7700806,
+        longitude: -80.36958470000002,
         hours: [
           {
             day: 'Monday',
@@ -38,8 +55,27 @@ angular.module('elCocoLocoApp')
             close: '9'
           }
         ],
-        contact: '786-564-4956'
+        contact: '786-367-4264'
       }
     ];
+
+    $scope.getStoreOpts = function(store) {
+     return angular.extend(
+       { title: store.name },
+       store.selected ? $scope.options.selected :
+          $scope.options.notselected
+      );
+    };
+
+    $scope.selectStore = function(store) {
+      if ($scope.store) {
+        $scope.store.selected = false;
+      }
+      $scope.store = store;
+      $scope.store.selected = true;
+      $scope.options.map.center = new google.maps.LatLng(store.latitude, store.longitude),
+
+      $scope.$broadcast('gmMarkersUpdate', 'locations');
+    };
 
   }]);

@@ -56,6 +56,10 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
+  namespace :api, path: '/api' do # constraints: {subdomain: 'api'} do
+    get '/menu', to: 'menu#all'
+  end
+
   # Whitelist Routes for AngularJS
   get '/home', to: 'main#index'
   get '/about', to: 'main#index'
@@ -66,5 +70,5 @@ Rails.application.routes.draw do
   get '/locations/:store', to: 'main#index'
   get '/login', to: 'main#index'
   get '/specials', to: 'main#index'
-  
+  get "*path", to: "main#index", format: false
 end

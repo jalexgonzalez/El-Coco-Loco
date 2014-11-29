@@ -1,0 +1,25 @@
+<root>
+  <Store
+    name="Bird Rd."
+    number="6420"
+    street="Bird Rd."
+    city="Miami"
+    state="FL"
+    zipcode="33155"
+    latitude="25.73328"
+    longitude="-80.29913899999997"
+    phone="(786) 367-4264"
+  />
+
+  <Store
+    name="Laguna Plaza"
+    number="70"
+    street="NW 107 Ave."
+    city="Miami"
+    state="FL"
+    zipcode="33174"
+    latitude="25.7700806"
+    longitude="-80.36958470000002"
+    phone="(786) 367-4264"
+  />
+</root>

@@ -1,5 +1,5 @@
 window.elCocoLocoApp = angular.module('elCocoLocoApp',
-  ['ngResource', 'ui.router', 'ngStorage', 'ui.bootstrap', 'AngularGM'])
+  ['ngResource', 'ui.router', 'ngStorage', 'ui.bootstrap', 'AngularGM', 'ngResource'])
   .config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
   'USER_ROLES', function($stateProvider, $locationProvider,
   $urlRouterProvider, USER_ROLES) {
@@ -28,10 +28,21 @@ window.elCocoLocoApp = angular.module('elCocoLocoApp',
       controller: 'MenuCtrl',
       data: {
         authorizedRoles: [USER_ROLES.all]
+      },
+      resolve: {
+        menuPromise: ['$http', function($http) {
+          return $http.get('/api/menu').
+            success(function(menu) {
+              return menu;
+            }).
+            error(function(data, status) {
+              return data;
+            });
+        }]
       }
     }).state('menu.type', {
       url: '/:type',
-      templateUrl: '/templates/menu.type',
+      // templateUrl: '/templates/menu.type',
       controller: 'MenuTypeCtrl',
       data: {
         authorizedRoles: [USER_ROLES.all]
@@ -84,7 +95,7 @@ window.elCocoLocoApp = angular.module('elCocoLocoApp',
     $rootScope.$on('$stateChangeStart', function (event, next) {
       var authorizedRoles = next.data.authorizedRoles;
       if (!AuthService.isAuthorized(authorizedRoles)) {
-        event.preventDefault();
+        // event.preventDefault();
         if (AuthService.isAuthenticated()) {
           // user is not allowed
           $rootScope.$broadcast(AUTH_EVENTS.notAuthorized);

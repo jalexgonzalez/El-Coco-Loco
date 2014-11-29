@@ -1,6 +1,6 @@
 'use strict';
 angular.module('elCocoLocoApp')
-  .controller('MenuCtrl', ['$scope', function($scope) {
+  .controller('MenuCtrl', ['$scope', 'menuPromise', function($scope, menuPromise) {
 
     $scope.menuCategories = [
       'pork',
@@ -11,5 +11,7 @@ angular.module('elCocoLocoApp')
       'juice',
       'helado'
     ];
+
+    $scope.menu = menuPromise.data;
 
   }]);

@@ -1,0 +1,47 @@
+.menu-container {
+  // Menu Top Menu Styling
+  .menuItem {
+    background: transparent;
+    color: $coco-link-green;
+    text-align: center;
+    display: block;
+    height: inherit;
+    padding: 4px;
+
+    $categories: ('pork', 'beef', 'chicken', 'fish', 'sandwich', 'juice', 'helado');
+
+    &:hover {
+      color: $coco-hover-green;
+      text-decoration: none;
+    }
+
+    .menu-icon {
+      font-size: 50px;
+    }
+  }
+
+
+  // Map styling
+  .map {
+    height: 600px;
+    img {
+      max-width: none;
+    }
+  }
+
+  .table td {
+    border-top: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0px;
+
+    &.spanish {
+      width: 60%;
+    }
+    &.english {
+      color: $mamey;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,17 +1,25 @@
-<div ui-view class="container-fluid">
+<div ui-view class="container all-locations-container">
   <div class="row">
     <div class="col-md-4">
       <store ng-repeat="location in locations"
-        addr="location.address"
-        hours="location.hours"
-        name="{{location.name}}"
-        contact="{{location.contact}}">
+        store="location" ng-click="selectStore(location)">
         <hr class="featurette-divider" ng-if="!$last" />
         </store>
     </div>
     <div class="col-md-8">
-      <gm-map gm-map-id="'elCocoLocoMap'" class="map">
-        </gm-map>
+      <gm-map gm-map-id="'elCocoLocoMap'"
+        gm-zoom="options.map.zoom"
+        gm-map-options="options.map"
+        gm-center="options.map.center"
+        class="map">
+
+        <gm-markers gm-objects="locations"
+          gm-id="object.name"
+          gm-position="{lat: object.latitude, lng: object.longitude}"
+          gm-marker-options="getStoreOpts(object)"
+          gm-on-click="selectStore(object, marker)">
+        </gm-markers>
+      </gm-map>
     </div>
   </div>
 </div>
