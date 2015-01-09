@@ -1,4 +1,4 @@
-<div class="container home-container">
+<div class="home-container">
   <!-- Carousel for Images -->
   <div class="carousel-wrapper">
     <carousel interval="slideInterval">
@@ -8,13 +8,14 @@
     </carousel>
   </div>
 
-</div>
-
-<div class="container home-container">
+  <div class="highlights">
   <!-- Highlighted Items -->
-  <div class="row highlights-wrapper">
-    <div ng-repeat="item in highlights" class="col-md-3 highlight">
-      <a><h1>{{item}}</h1></a>
+    <div class="container">
+      <div class="row highlights-wrapper">
+        <div ng-repeat="item in highlights" class="col-md-3 highlight">
+          <a><h1>{{item}}</h1></a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -2,10 +2,18 @@
 .home-container {
 
   .carousel-wrapper {
-    height: 450px !important;
+    // height: 450px !important;
+    height: 500px !important;
+    margin-top: -145px;
+    z-index: -1 !important;
+
+    .carousel-indicators, .carousel-control {
+      display: none;
+    }
 
     .carousel {
       height: inherit;
+      z-index: -1 !important;
     }
 
     .carousel-inner {
@@ -43,12 +51,47 @@
     }
   }
 
+  .highlights {
+    background: $coco-white;
+    width: 100%;
+  }
+
+  .highlights:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 0 0 100vw;
+    border-color: transparent transparent transparent $coco-white;
+    line-height: 0px;
+    _border-color: #000000 #000000 #000000 #ffffff;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+
+.highlights:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vw 50px 0;
+  border-color: transparent $coco-white transparent transparent;
+  line-height: 0px;
+  _border-color: #000000 $coco-white #000000 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
 
   // Highlights for homepage styling
   .highlights-wrapper {
-    margin-top: 20px;
-    padding: 0px 12px;
     box-sizing: border-box !important;
+    // margin-top: 20px;
+    padding: 0px 12px;
 
     .highlight {
       height: 160px;

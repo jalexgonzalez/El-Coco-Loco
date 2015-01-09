@@ -5,7 +5,6 @@
     color: $coco-link-green;
     text-align: center;
     display: block;
-    height: inherit;
     padding: 4px;
 
     $categories: ('pork', 'beef', 'chicken', 'fish', 'sandwich', 'juice', 'helado');
@@ -20,28 +19,45 @@
     }
   }
 
+  .menu-wrapper {
+    clear: both;
+    margin: 20px 0;
+  }
 
-  // Map styling
-  .map {
-    height: 600px;
-    img {
-      max-width: none;
+  .category-name {
+    background-image: url(asset-path('slashes-green.png', image));
+    background-position: 0 16px;
+    background-repeat: repeat-x;
+    clear: both;
+
+    span {
+      background: $coco-background;
+      padding-right: 2px;
     }
   }
 
-  .table td {
-    border-top: none;
-    font-family: Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    padding: 0px;
+  .item {
+    padding-top: 8px;
+    padding-bottom: 8px;
 
-    &.spanish {
-      width: 60%;
+    &:nth-child(odd) {
+      clear: left;
     }
+  }
+
+
+
+  p {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+
     &.english {
       color: $mamey;
       font-size: 14px;
+      font-weight: normal;
     }
   }
 }

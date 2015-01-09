@@ -1,22 +1,24 @@
 <div class="container menu-container">
   <!-- Menu Categories -->
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <div ng-repeat="category in menuCategories" class="col-xs-4">
+  <!-- <div class="row"> -->
+    <div class="clearfix">
+      <div ng-repeat="category in menuCategories" class="col-xs-3 col-sm-2">
         <menu-item caption="{{category}}" category="{{category}}" icon="{{category}}"></menu-item>
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-8" ng-controller="MenuTypeCtrl">
-      <div ng-repeat="type in menu | filter: {type: filterType}">
-        <h2>{{type.name}}</h2>
-        <table class="table">
-          <tr ng-repeat="item in type.items">
-            <td class="spanish">{{item.spanish_name}}</td>
-            <td class="english">{{item.english_name}}</td>
-          </tr>
-        </table>
+    <div class="menu-wrapper" ng-controller="MenuTypeCtrl">
+      <!-- <div ng-repeat="type in menu | filter: {type: filterType}"> -->
+      <div ng-repeat="type in menu">
+        <a name="{{type.type}}"></a>
+        <h2 class="category-name"><span>{{type.name}}</span></h2>
+        <div class="row">
+          <div class="item col-sm-6" ng-repeat="item in type.items">
+            <p class="spanish">{{item.spanish_name}}</p>
+            <p class="english">{{item.english_name}}</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </div>

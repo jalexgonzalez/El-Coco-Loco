@@ -1,6 +1,14 @@
 header {
+  background-color: $mamey !important;
+  height: 50px;
+  margin-bottom: 35px;
+  z-index: 1000 !important;
+
   nav, .navbar-default {
     background-color: $mamey !important;
+    border: none !important;
+    border-radius: 0;
+    z-index: 1000 !important;
 
     a {
       color: $coco-white !important;
