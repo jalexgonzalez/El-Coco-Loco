@@ -35,10 +35,10 @@ angular.module('elCocoLocoApp')
             close: '9'
           }
         ],
-        contact: '786-367-4264'
+        contact: ''
       },
       {
-        name: 'Laguna Plaza',
+        name: 'Sweetwater',
         address: {
           number: 70,
           street: 'NW 107 Ave.',
@@ -55,7 +55,7 @@ angular.module('elCocoLocoApp')
             close: '9'
           }
         ],
-        contact: '786-367-4264'
+        contact: ''
       }
     ];
 

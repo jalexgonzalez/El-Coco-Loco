@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "FlaticonThree";
+  src: font-url("Flaticon3/flaticon3.eot");
+  src: font-url("Flaticon3/flaticon3.eot#iefix") format("embedded-opentype"),
+  font-url("Flaticon3/flaticon3.woff") format("woff"),
+  font-url("Flaticon3/flaticon3.ttf") format("truetype"),
+  font-url("Flaticon3/flaticon3.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class$="combination-plate"]:before {
+  font-family: FlaticonThree;
+  content: "\e000";
+}

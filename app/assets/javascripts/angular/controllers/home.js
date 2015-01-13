@@ -5,9 +5,9 @@ angular.module('elCocoLocoApp')
     // Rewrite this later
     $scope.slideInterval = 5000;
     $scope.slides = [];
-    var slide0 = {
-      name: 'coconuts'
-    };
+    // var slide0 = {
+    //   name: 'coconuts'
+    // };
 
     var slide1 = {
       name: 'chicharrones'
@@ -33,8 +33,8 @@ angular.module('elCocoLocoApp')
       name: 'empanadas'
     };
 
-    $scope.slides.push(slide0, slide1, slide2, slide3, slide4, slide5, slide6);
+    $scope.slides.push(slide1, slide2, slide3, slide4, slide5, slide6);
 
-    $scope.highlights = ['1', '2', '3', '4'];
+    $scope.highlights = ['Low Carb Friendly Menu', 'Homemade Premium Ice Cream & Gelato', 'Find The Nearest Location', 'Open Daily from 7am to 9pm'];
 
   }]);

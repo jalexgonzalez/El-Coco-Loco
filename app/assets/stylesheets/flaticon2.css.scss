@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "FlaticonTwo";
+  src: font-url("Flaticon2/flaticon2.eot");
+  src: font-url("Flaticon2/flaticon2.eot#iefix") format("embedded-opentype"),
+  font-url("Flaticon2/flaticon2.woff") format("woff"),
+  font-url("Flaticon2/flaticon2.ttf") format("truetype"),
+  font-url("Flaticon2/flaticon2.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-style: normal;
+}
+[class$="breakfast-coffee"]:before {
+  font-family: FlaticonTwo;
+  content: "\e002";
+}
+[class$="salads"]:before {
+  font-family: FlaticonTwo;
+  content: "\e021";
+}
+[class$="soups"]:before {
+  font-family: FlaticonTwo;
+  content: "\e017";
+}
+[class$="rice"]:before {
+  font-family: FlaticonTwo;
+  content: "\e004";
+}
+[class$="combination-plate"]:before {
+  font-family: FlaticonTwo;
+  content: "\e00f";
+}
+[class$="beef"]:before {
+  font-family: FlaticonTwo;
+  content: "\e009";
+}
+[class$="other-meats"]:before {
+  font-family: FlaticonTwo;
+  content: "\e023";
+}
+[class$="seafood"]:before {
+  font-family: FlaticonTwo;
+  content: "\e00e";
+}
+[class$="chicken"]:before {
+  font-family: FlaticonTwo;
+  content: "\e003";
+}
+[class$="side-orders"]:before {
+  font-family: FlaticonTwo;
+  content: "\e010";
+}
+[class$="sandwiches"]:before {
+  font-family: FlaticonTwo;
+  content: "\e022";
+}
+[class$="natural-juices"]:before {
+  font-family: FlaticonTwo;
+  content: "\e006";
+}
+[class$="desserts"]:before {
+  font-family: FlaticonTwo;
+  content: "\e00a";
+}
+[class$="latin-food-products"]:before {
+  font-family: FlaticonTwo;
+  content: "\e00a";
+}
+[class$="ice-cream"]:before {
+  font-family: FlaticonTwo;
+  content: "\e01b";
+}
+[class$="sorbet"]:before {
+  font-family: FlaticonTwo;
+  content: "\e01a";
+}

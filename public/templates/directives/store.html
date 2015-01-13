@@ -1,6 +1,7 @@
 <div class="store-wrapper">
 <div class="store" ng-class="{'selected-store': store.selected}">
-  <a ui-sref="locations.store"><h2>{{store.name}}</h2></a>
+  <!-- <a ui-sref=".store({store : store.name})"><h2>{{store.name}}</h2></a> -->
+  <h2>{{store.name}}</h2>
   <p class="address">
     <span class="specific">{{store.address.number}} {{store.address.street}}</span>
     <span class="general">{{store.address.city}}, {{store.address.state}} {{store.address.zip}}</span>

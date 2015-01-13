@@ -1,8 +1,12 @@
 .menu-container {
   // Menu Top Menu Styling
+  margin-bottom: 80px;
+
   .menuItem {
     background: transparent;
+    box-sizing: border-box;
     color: $coco-link-green;
+    height: 112px;
     text-align: center;
     display: block;
     padding: 4px;
@@ -31,7 +35,7 @@
     clear: both;
 
     span {
-      background: $coco-background;
+      background: #fff;
       padding-right: 2px;
     }
   }

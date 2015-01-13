@@ -1,12 +1,13 @@
-<div ui-view class="container all-locations-container">
+<div ui-view class="all-locations-container">
+  <div class="container">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-sm-4 col-md-4">
       <store ng-repeat="location in locations"
         store="location" ng-click="selectStore(location)">
         <hr class="featurette-divider" ng-if="!$last" />
         </store>
     </div>
-    <div class="col-md-8">
+    <div class="col-sm-8 col-md-8">
       <gm-map gm-map-id="'elCocoLocoMap'"
         gm-zoom="options.map.zoom"
         gm-map-options="options.map"
@@ -21,5 +22,6 @@
         </gm-markers>
       </gm-map>
     </div>
+  </div>
   </div>
 </div>

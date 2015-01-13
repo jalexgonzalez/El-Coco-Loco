@@ -53,39 +53,41 @@
 
   .highlights {
     background: $coco-white;
+    margin-top: -50px;
+    padding: 50px 0;
     width: 100%;
   }
 
-  .highlights:before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 50px 0 0 100vw;
-    border-color: transparent transparent transparent $coco-white;
-    line-height: 0px;
-    _border-color: #000000 #000000 #000000 #ffffff;
-    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
-    position: relative;
-    top: 0;
-    left: 0;
-  }
+//   .highlights:before {
+//     content: "";
+//     width: 0;
+//     height: 0;
+//     border-style: solid;
+//     border-width: 50px 0 0 100vw;
+//     border-color: transparent transparent transparent $coco-white;
+//     line-height: 0px;
+//     _border-color: #000000 #000000 #000000 #ffffff;
+//     _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+//     position: relative;
+//     top: 0;
+//     left: 0;
+//   }
 
 
-.highlights:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 100vw 50px 0;
-  border-color: transparent $coco-white transparent transparent;
-  line-height: 0px;
-  _border-color: #000000 $coco-white #000000 #000000;
-  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
-  position: relative;
-  bottom: 0;
-  right: 0;
-}
+// .highlights:after {
+//   content: "";
+//   width: 0;
+//   height: 0;
+//   border-style: solid;
+//   border-width: 0 100vw 50px 0;
+//   border-color: transparent $coco-white transparent transparent;
+//   line-height: 0px;
+//   _border-color: #000000 $coco-white #000000 #000000;
+//   _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+//   position: relative;
+//   bottom: 0;
+//   right: 0;
+// }
 
   // Highlights for homepage styling
   .highlights-wrapper {
@@ -94,15 +96,22 @@
     padding: 0px 12px;
 
     .highlight {
+      display: table;
       height: 160px;
-      background: $coco-green;
-      background-clip: content-box;
+      // background: $coco-green;
+      // background-clip: content-box;
 
       -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
       -moz-box-sizing: border-box;    /* Firefox, other Gecko */
       box-sizing: border-box;         /* Opera/IE 8+ */
 
-      padding: 0px 2px !important;
+      padding: 0px 16px !important;
+      text-align: center;
+
+      a {
+        display: table-cell;
+        vertical-align: middle;
+      }
     }
   }
 }

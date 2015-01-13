@@ -1,10 +1,10 @@
 .about-container {
+  margin-bottom: 80px;
   .sidebar-image {
-    background-color: #ccc;
     background-image: url(asset-path('pig.jpg', image)) !important;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
     height: 400px;
     margin-top: 20px;
     width: 100%;
