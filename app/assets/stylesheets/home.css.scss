@@ -23,7 +23,7 @@
         height: inherit;
       }
 
-      $foods: ('arepas', 'chicharrones', 'coconuts', 'tostones', 'juice', 'pastelitos', 'empanadas');
+      $foods: ('arepas', 'chicharrones', 'coconuts', 'tostones', 'juice', 'pastelitos', 'empanadas', 'coffee', 'oranges', 'icecream');
       @each $food in $foods {
         .#{$food} {
           background-image: url(asset-path('#{$food}.jpg', image)) !important;

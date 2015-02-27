@@ -56,25 +56,32 @@
 <%= yield %>
 <%= javascript_include_tag 'application' %>
 
-  <footer>
+  <footer ng-controller="FooterCtrl">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
           <h3>Locations</h3>
+          <p><a ui-sref="locations">Bird Road</a></p>
+          <p><a ui-sref="locations">Sweetwater</a></p>
+
           <h3>Hours</h3>
+          <p>7AM - 9PM Daily</p>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-9">
           <h3>Menu</h3>
+          <div class="row">
+            <a class="col-xs-6 col-sm-4" ui-sref="menu" ng-repeat="category in menuCategories">{{category}}</a>
+          </div>
         </div>
 
-        <div class="col-md-3">
+        <!-- <div class="col-md-3">
           <h3>About</h3>
         </div>
 
         <div class="col-md-3">
           <h3>Social Media</h3>
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>
