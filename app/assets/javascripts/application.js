@@ -15,7 +15,7 @@
 //= require bootstrap
 //= require angular
 //= require angular-resource
-//= require angular-ui-router.min
+//= require angular-ui-router
 //= require angular-ui-bootstrap-tpls
 //= require ui.bootstrap
 //= require ngstorage.min

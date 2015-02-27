@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # Javascript
 gem 'jquery-rails'
 gem 'angularjs-rails'
-gem 'angular-ui-router-rails'
+gem 'rails-assets-angular-ui-router'
 gem 'angular-ui-bootstrap-rails'
 gem 'rails-assets-angular-mocks'
 gem 'underscore-rails'
@@ -39,4 +39,4 @@ gem 'mechanize'
 gem 'rails_12factor', group: :production
 gem 'rails_on_heroku'
 gem 'unicorn'
-ruby "2.1.1"
+ruby "2.1.5"
