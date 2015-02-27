@@ -1,0 +1,76 @@
+header {
+  background-color: $mamey !important;
+  height: 50px;
+  margin-bottom: 35px;
+  z-index: 1000 !important;
+
+  nav, .navbar-default {
+    background-color: $mamey !important;
+    border: none !important;
+    border-radius: 0;
+    z-index: 1000 !important;
+
+    a {
+      color: $coco-white !important;
+      text-transform: uppercase;
+    }
+
+    button.navbar-toggle {
+      background-color : $mamey;
+      border: none;
+
+      &:hover {
+        background-color: inherit;
+      }
+
+      .icon-bar{
+        background-color: $coco-white !important;
+      }
+    }
+
+    .center-brand {
+      position: absolute;
+      width: 50%;
+      left: 25%;
+      text-align: center;
+      margin: auto;
+    }
+
+    .left-brand {
+      position: absolute;
+      width: 200px;
+      height: 126px;
+      left: 0;
+      text-align: center;
+      margin: auto;
+    }
+
+    .navbar-left {
+      margin-left: -15px !important; // makes it so both sides menu aligned
+    }
+
+    .logo {
+      background-image: url(asset-path('logo.png', image)) !important;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 200px 126px;
+      overflow: visible;
+      z-index: 1000;
+      height: 126px;
+      top: -42px;
+      left: 10px;
+
+
+      &.mobile {
+        width: 160px;
+        background-position: left center;
+        background-size: 120px 75px !important;
+        overflow: visible !important;
+        z-index: 1000;
+        height: 75px !important;
+        top: -15px;
+        position: absolute;
+      }
+    }
+  }
+}

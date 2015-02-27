@@ -1,0 +1,67 @@
+.menu-container {
+  // Menu Top Menu Styling
+  margin-bottom: 80px;
+
+  .menuItem {
+    background: transparent;
+    box-sizing: border-box;
+    color: $coco-link-green;
+    height: 112px;
+    text-align: center;
+    display: block;
+    padding: 4px;
+
+    $categories: ('pork', 'beef', 'chicken', 'fish', 'sandwich', 'juice', 'helado');
+
+    &:hover {
+      color: $coco-hover-green;
+      text-decoration: none;
+    }
+
+    .menu-icon {
+      font-size: 50px;
+    }
+  }
+
+  .menu-wrapper {
+    clear: both;
+    margin: 20px 0;
+  }
+
+  .category-name {
+    background-image: url(asset-path('slashes-green.png', image));
+    background-position: 0 16px;
+    background-repeat: repeat-x;
+    clear: both;
+
+    span {
+      background: #fff;
+      padding-right: 2px;
+    }
+  }
+
+  .item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    &:nth-child(odd) {
+      clear: left;
+    }
+  }
+
+
+
+  p {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+
+    &.english {
+      color: $mamey;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+}

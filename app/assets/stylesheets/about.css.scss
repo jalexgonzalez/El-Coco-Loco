@@ -1,0 +1,17 @@
+.about-container {
+  margin-bottom: 80px;
+  .sidebar-image {
+    background-image: url(asset-path('pig.jpg', image)) !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 400px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  p {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+  }
+}

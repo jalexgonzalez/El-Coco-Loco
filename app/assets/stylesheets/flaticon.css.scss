@@ -1,0 +1,63 @@
+@font-face {
+	font-family: "Flaticon";
+	src: font-url("Flaticon/flaticon.eot");
+	src: font-url("Flaticon/flaticon.eot#iefix") format("embedded-opentype"),
+	font-url("Flaticon/flaticon.woff") format("woff"),
+	font-url("Flaticon/flaticon.ttf") format("truetype"),
+	font-url("Flaticon/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+	font-family: Flaticon;
+	font-style: normal;
+}
+[class$="beef"]:before {
+	content: "\e000";
+}
+[class$="sandwich1"]:before {
+	content: "\e001";
+}
+[class$="chicken1"]:before {
+	content: "\e002";
+}
+[class$="chicken"]:before {
+	content: "\e003";
+}
+[class$="juice"]:before {
+	content: "\e004";
+}
+[class$="coffee"]:before {
+	content: "\e005";
+}
+[class$="beef2"]:before {
+	content: "\e006";
+}
+[class$="sandwich"]:before {
+	content: "\e007";
+}
+[class$="fish"]:before {
+	content: "\e008";
+}
+[class$="fish2"]:before {
+	content: "\e009";
+}
+[class$="fish3"]:before {
+	content: "\e00a";
+}
+[class$="fish4"]:before {
+	content: "\e00b";
+}
+[class$="helado"]:before {
+	content: "\e00c";
+}
+[class$="helado2"]:before {
+	content: "\e00d";
+}
+[class$="pork"]:before {
+	content: "\e00e";
+}
+[class$="fruit"]:before {
+	content: "\e00f";
+}

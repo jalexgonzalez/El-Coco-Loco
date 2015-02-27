@@ -21,6 +21,8 @@ gem 'angular-ui-router-rails'
 gem 'angular-ui-bootstrap-rails'
 gem 'rails-assets-angular-mocks'
 gem 'underscore-rails'
+gem 'rails-assets-AngularGM'
+gem 'rails-assets-ngAutocomplete'
 
 # Testing
 gem 'rspec-rails'

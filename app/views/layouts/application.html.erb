@@ -1,14 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Elcocoloco</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>El Coco Loco</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-app="elCocoLocoApp" ng-controller="ApplicationController">
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-default" role="navbar">
+        <div class="navbar-header visible-xs">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#cocoNav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo mobile visible-xs-block" ui-sref="home"></a>
+        </div>
+
+        <!-- <a class="navbar-brand center-brand logo hidden-xs" ui-sref="home"></a> -->
+        <a class=" left-brand logo navbar-brand hidden-xs" ui-sref="home"></a>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="cocoNav">
+          <!-- <ul class="nav navbar-nav navbar-left">
+            <li><a ui-sref="menu">Menu</a></li>
+            <li><a ui-sref="about">About</a></li>
+          </ul> -->
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a ui-sref="menu">Menu</a></li>
+            <li><a ui-sref="about">About</a></li>
+
+            <li><a ui-sref="locations">Locations</a></li>
+            <!-- <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Language <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">English</a></li>
+                <li><a href="#">Spanish</a></li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
 
 <%= yield %>
+<%= javascript_include_tag 'application' %>
+
+  <footer ng-controller="FooterCtrl">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h3>Locations</h3>
+          <p><a ui-sref="locations">Bird Road</a></p>
+          <p><a ui-sref="locations">Sweetwater</a></p>
+
+          <h3>Hours</h3>
+          <p>7AM - 9PM Daily</p>
+        </div>
+
+        <div class="col-md-9">
+          <h3>Menu</h3>
+          <div class="row">
+            <a class="col-xs-6 col-sm-4" ui-sref="menu" ng-repeat="category in menuCategories">{{category}}</a>
+          </div>
+        </div>
+
+        <!-- <div class="col-md-3">
+          <h3>About</h3>
+        </div>
+
+        <div class="col-md-3">
+          <h3>Social Media</h3>
+        </div> -->
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

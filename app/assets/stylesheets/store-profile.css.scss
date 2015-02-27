@@ -1,0 +1,29 @@
+// Store Profile Styling
+.store-profile-container {
+  .cover-photo {
+    background: #eee;
+    height: 400px;
+    margin: -145px 0 20px 0;
+    position: relative;
+    width: 100%;
+    z-index: -1 !important;
+
+    .address-info {
+      background: rgba(0, 0, 0, .55);
+      color: $coco-white;
+      max-width: 40%;
+      padding: 12px 12px 12px 20px;
+      position: absolute;
+      bottom: 0;
+
+      h1 {
+        margin-top: 0;
+      }
+
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,13 @@
+<div class="container login-container">
+	<form name="loginForm" ng-controller="LoginController" class="login-form center-block"
+	      ng-submit="login(credentials)" novalidate>
+		<input type="text" class="form-control center-block input-lg" id="username"
+			placeholder="Username" ng-model="credentials.username" required>
+
+		<input type="password" class="form-control center-block input-lg" id="password"
+			placeholder="Password" ng-model="credentials.password" required>
+
+		<button type="submit" class="btn btn-lg btn-danger"
+			ng-disabled="loginForm.$invalid">Login</button>
+	</form>
+</div>
