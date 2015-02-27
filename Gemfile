@@ -39,4 +39,4 @@ gem 'mechanize'
 gem 'rails_12factor', group: :production
 gem 'rails_on_heroku'
 gem 'unicorn'
-ruby "2.1.1"
+ruby "2.1.5"
