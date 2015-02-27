@@ -1,0 +1,2 @@
+secret = Rails.env.production? ? ENV['SECRET_TOKEN'] : '16d6c326cdce449e4ee25380a24cca85cf6ef51901ac54c1dd383cec15d559404964ed235b8381b13b4bf8ff9140fc58bbd81209d6223e2c6830df697aa318d8'
+Elcocoloco::Application.config.secret_key_base = secret
