@@ -8,4 +8,6 @@ angular.module('elCocoLocoApp')
       return menuItem.type;
     });
 
+    $('#topcontrol').addClass('visible');
+
   }]);

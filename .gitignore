@@ -16,4 +16,3 @@
 /tmp
 
 # Ignore Secrets
-/config/secrets.yml

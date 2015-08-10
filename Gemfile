@@ -23,6 +23,7 @@ gem 'rails-assets-angular-mocks'
 gem 'underscore-rails'
 gem 'rails-assets-AngularGM'
 gem 'rails-assets-ngAutocomplete'
+gem 'rails-assets-angular-ui-scrollpoint'
 
 # Testing
 gem 'rspec-rails'

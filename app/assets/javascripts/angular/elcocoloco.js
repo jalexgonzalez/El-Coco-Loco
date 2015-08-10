@@ -1,5 +1,5 @@
 window.elCocoLocoApp = angular.module('elCocoLocoApp',
-  ['ngResource', 'ui.router', 'ngStorage', 'ui.bootstrap', 'AngularGM', 'ngResource'])
+  ['ngResource', 'ui.router', 'ngStorage', 'ui.bootstrap', 'AngularGM', 'ngResource', 'ui.scrollpoint'])
   .config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
   'USER_ROLES', function($stateProvider, $locationProvider,
   $urlRouterProvider, USER_ROLES) {
@@ -94,6 +94,7 @@ window.elCocoLocoApp = angular.module('elCocoLocoApp',
     });
     $rootScope.$on('$stateChangeStart', function (event, next) {
       var authorizedRoles = next.data.authorizedRoles;
+      $('#topcontrol').removeClass('visible');
       if (!AuthService.isAuthorized(authorizedRoles)) {
         // event.preventDefault();
         if (AuthService.isAuthenticated()) {

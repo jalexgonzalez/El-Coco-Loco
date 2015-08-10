@@ -21,5 +21,6 @@
 //= require ngstorage.min
 //= require AngularGM
 //= require ngAutocomplete
+//= require scrollpoint.min
 //= require angular/elcocoloco
 //= require_tree ./angular
