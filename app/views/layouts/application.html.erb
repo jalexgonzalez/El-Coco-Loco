@@ -4,7 +4,7 @@
   <title>El Coco Loco</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src="//maps.googleapis.com/maps/api/js"></script>
   <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow88.js"></script>
@@ -63,16 +63,18 @@
   <footer ng-controller="FooterCtrl">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-xs-6 col-md-3">
           <h3>Locations</h3>
           <p><a ui-sref="locations">Bird Road</a></p>
           <p><a ui-sref="locations">Sweetwater</a></p>
-
-          <h3>Hours</h3>
-          <p>7AM - 9PM Daily</p>
         </div>
 
-        <div class="col-md-9">
+        <div class="col-xs-6 col-md-3">
+          <h3>Hours</h3>
+          <p>6:30AM - 10PM Daily</p>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-9">
           <h3>Menu</h3>
           <div class="row">
             <a class="col-xs-6 col-sm-4" ui-sref="menu" ng-repeat="category in menuCategories">{{category}}</a>

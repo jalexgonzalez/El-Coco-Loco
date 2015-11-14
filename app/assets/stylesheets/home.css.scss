@@ -51,13 +51,6 @@
     }
   }
 
-  .highlights {
-    background: $coco-white;
-    margin-top: -50px;
-    padding: 50px 0;
-    width: 100%;
-  }
-
 //   .highlights:before {
 //     content: "";
 //     width: 0;
@@ -89,29 +82,60 @@
 //   right: 0;
 // }
 
-  // Highlights for homepage styling
-  .highlights-wrapper {
-    box-sizing: border-box !important;
-    // margin-top: 20px;
-    padding: 0px 12px;
+  /* Custom, iPhone Retina */
+  @media only screen and (min-width : 320px) {
+    .highlights {
+      background: $coco-white;
+      margin-top: -50px;
+      padding: 20px 0 50px 0;
+      width: 100%;
+    }
 
-    .highlight {
-      display: table;
-      height: 160px;
-      // background: $coco-green;
-      // background-clip: content-box;
+    .highlights-wrapper {
+      box-sizing: border-box !important;
+      // margin-top: 20px;
+      padding: 0px 12px;
 
-      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-      box-sizing: border-box;         /* Opera/IE 8+ */
+      .highlight {
+        display: table;
+        height: 120px;
+        // background: $coco-green;
+        // background-clip: content-box;
 
-      padding: 0px 16px !important;
-      text-align: center;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
 
-      a {
-        display: table-cell;
-        vertical-align: middle;
+        padding: 0px 16px !important;
+        text-align: center;
+
+        a {
+          display: table-cell;
+          vertical-align: middle;
+        }
       }
+    }
+  }
+
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width : 480px) {
+    .highlights {
+      padding: 20px 0;
+    }
+
+    .highlights-wrapper .highlight {
+      height: 120px;
+    }
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    .highlights {
+      padding: 50px 0;
+    }
+
+    .highlights-wrapper .highlight {
+      height: 160px;
     }
   }
 }

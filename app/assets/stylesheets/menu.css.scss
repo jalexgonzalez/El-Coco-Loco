@@ -12,8 +12,6 @@
     display: block;
     padding: 4px;
 
-    $categories: ('pork', 'beef', 'chicken', 'fish', 'sandwich', 'juice', 'helado');
-
     &:hover {
       color: $coco-hover-green;
       text-decoration: none;
@@ -21,6 +19,42 @@
 
     .menu-icon {
       font-size: 50px;
+    }
+  }
+
+  /* Custom, iPhone Retina */
+  @media only screen and (min-width : 320px) {
+    .menuItem {
+      height: 140px;
+      padding: 4px;
+
+      .menu-icon {
+        font-size: 50px;
+      }
+    }
+  }
+
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width : 480px) {
+    .menuItem {
+      height: 140px;
+      padding: 4px;
+
+      .menu-icon {
+        font-size: 50px;
+      }
+    }
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    .menuItem {
+      height: 112px;
+      padding: 4px;
+
+      .menu-icon {
+        font-size: 50px;
+      }
     }
   }
 
