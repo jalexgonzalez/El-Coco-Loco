@@ -1,12 +1,16 @@
 .store-wrapper {
-  .store {
-      box-sizing: border-box;
-      padding: 10px;
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
 
-      h2 {
-        margin-top: 0px;
-      }
+  .store {
+    box-sizing: border-box;
+    padding: 10px;
+
+    h2 {
+      margin-top: 0px;
     }
+  }
 
   .selected-store {
     background-color: lighten(#ccc, 10);

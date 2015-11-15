@@ -7,3 +7,11 @@ body {
   font-family: 'Yanone Kaffeesatz','Helvetica',Arial,sans-serif;
   font-size: 20px;
 }
+
+#topcontrol {
+  visibility: hidden;
+
+  &.visible {
+    visibility: visible !important;
+  }
+}
