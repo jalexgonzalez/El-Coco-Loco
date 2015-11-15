@@ -6,7 +6,10 @@ angular.module('elCocoLocoApp')
       map: {
         center: new google.maps.LatLng(25.72, -80.33),
         zoom: 12,
-        mapTypeId: google.maps.MapTypeId.TERRAIN
+        mapTypeId: google.maps.MapTypeId.TERRAIN,
+        draggable: false,
+        scrollwheel: false,
+        panControl: false
       },
       notselected: {
         icon: 'https://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png',
@@ -31,8 +34,8 @@ angular.module('elCocoLocoApp')
         hours: [
           {
             day: 'Monday',
-            open: '7',
-            close: '9'
+            open: '6:30',
+            close: '10'
           }
         ],
         contact: ''
@@ -51,8 +54,8 @@ angular.module('elCocoLocoApp')
         hours: [
           {
             day: 'Monday',
-            open: '7',
-            close: '9'
+            open: '6:30',
+            close: '10'
           }
         ],
         contact: ''
