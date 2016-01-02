@@ -38,7 +38,8 @@ angular.module('elCocoLocoApp')
             close: '10'
           }
         ],
-        contact: ''
+        contact: '',
+        nowOpen: true
       },
       {
         name: 'Sweetwater',
@@ -58,7 +59,8 @@ angular.module('elCocoLocoApp')
             close: '10'
           }
         ],
-        contact: ''
+        contact: '',
+        nowOpen: false
       }
     ];
 
