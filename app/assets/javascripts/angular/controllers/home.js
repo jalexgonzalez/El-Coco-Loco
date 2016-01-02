@@ -32,7 +32,7 @@ angular.module('elCocoLocoApp')
       {text: 'Low Carb Friendly Menu', sref: 'menu'},
       {text: 'Homemade Premium Ice Cream & Sorbet', sref: 'menu'},
       {text: 'Find The Nearest Location', sref: 'locations'},
-      {text: 'Open Daily from 6:30am to 10pm', sref: 'locations'}
+      {text: 'Breakfast, Lunch, & Dinner from 7am to 10pm', sref: 'locations'}
     ];
 
   }]);

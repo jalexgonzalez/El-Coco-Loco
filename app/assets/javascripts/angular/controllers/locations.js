@@ -34,7 +34,7 @@ angular.module('elCocoLocoApp')
         hours: [
           {
             day: 'Monday',
-            open: '6:30',
+            open: '7',
             close: '10'
           }
         ],
@@ -54,7 +54,7 @@ angular.module('elCocoLocoApp')
         hours: [
           {
             day: 'Monday',
-            open: '6:30',
+            open: '7',
             close: '10'
           }
         ],
