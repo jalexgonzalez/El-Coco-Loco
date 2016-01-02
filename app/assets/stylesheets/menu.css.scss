@@ -23,6 +23,21 @@
     }
   }
 
+  div.key {
+    margin: 10px 0;
+
+    .key-item {
+      font-size: 14px;
+      color: black;
+      font-weight: normal !important;
+      margin: 0 8px 0 8px;
+
+      &:first-of-type {
+        margin: 0 8px 0 0;
+      }
+    }
+  }
+
   /* Custom, iPhone Retina */
   @media only screen and (min-width : 320px) {
     .menuItem {
@@ -74,6 +89,10 @@
       background: #fff;
       padding-right: 2px;
     }
+  }
+
+  .glyphicon-heart {
+    color: #E74C3C;
   }
 
   .item {

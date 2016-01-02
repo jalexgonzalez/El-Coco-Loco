@@ -6,6 +6,14 @@
         <menu-item caption="{{category.name}}" category="{{category.type}}" icon="{{category.type}}"></menu-item>
       </div>
     </div>
+    <div class="key clearfix" >
+      <p class="key-item pull-left">
+        <span class="glyphicon glyphicon-heart"></span> Low Carb Option
+      </p>
+      <p class="key-item pull-left">
+        * Available with Combination Plate
+      </p>
+    </div>
 
     <div class="menu-wrapper" ng-controller="MenuTypeCtrl">
       <!-- <div ng-repeat="type in menu | filter: {type: filterType}"> -->
@@ -14,7 +22,10 @@
         <h2 class="category-name"><span>{{type.name}}</span></h2>
         <div class="row">
           <div class="item col-xs-12 col-sm-6" ng-repeat="item in type.items">
-            <p class="spanish">{{item.spanish_name}}</p>
+            <p class="spanish">
+              {{item.spanish_name}}
+              <span class="glyphicon glyphicon-heart"></span>
+            </p>
             <p class="english">{{item.english_name}}</p>
           </div>
         </div>
