@@ -12,7 +12,7 @@
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
   font-style: normal;
 }
-[class$="breakfast-coffee"]:before {
+[class$="breakfast"]:before {
   font-family: FlaticonTwo;
   content: "\e002";
 }
@@ -24,14 +24,14 @@
   font-family: FlaticonTwo;
   content: "\e017";
 }
-[class$="rice"]:before {
+[class$="rice-pasta"]:before {
   font-family: FlaticonTwo;
   content: "\e004";
 }
-[class$="combination-plate"]:before {
-  font-family: FlaticonTwo;
-  content: "\e00f";
-}
+// [class$="combination"]:before {
+//   font-family: FlaticonTwo;
+//   content: "\e00f";
+// }
 [class$="beef"]:before {
   font-family: FlaticonTwo;
   content: "\e009";

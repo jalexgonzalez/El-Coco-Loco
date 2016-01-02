@@ -1,4 +1,17 @@
 footer {
   background-color: $coco-background;
   padding: 40px 0 80px 0;
+
+  .icon-attribution {
+    height: 10px;
+    margin: 0 0 0 0;
+    font-size: 10px;
+    position: relative;
+    top: 50px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
 }

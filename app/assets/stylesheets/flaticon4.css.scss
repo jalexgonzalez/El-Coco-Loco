@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "FlaticonFour";
+  src: font-url("Flaticon4/flaticon.eot");
+  src: font-url("Flaticon4/flaticon.eot#iefix") format("embedded-opentype"),
+  font-url("Flaticon4/flaticon.woff") format("woff"),
+  font-url("Flaticon4/flaticon.ttf") format("truetype"),
+  font-url("Flaticon4/flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class$="latin-food-products"]:before {
+  font-family: FlaticonFour;
+  content: "\e000";
+}
+[class$="latin-food-products"]:before {
+  font-family: FlaticonFour;
+  content: "\e006";
+}
+[class$="daily-specials"]:before {
+  font-family: FlaticonFour;
+  content: "\e001";
+}
+[class$="daily-specials"]:before {
+  font-family: FlaticonFour;
+  content: "\e007";
+}
+[class$="desserts"]:before {
+  font-family: FlaticonFour;
+  content: "\e008";
+}
+[class$="cold-drinks"]:before {
+  font-family: FlaticonFour;
+  content: "\e003";
+}
+[class$="snacks"]:before {
+  font-family: FlaticonFour;
+  content: "\e002";
+}
+[class$="vegetables"]:before {
+  font-family: FlaticonFour;
+  content: "\e004";
+}
+[class$="vegetables"]:before {
+  font-family: FlaticonFour;
+  content: "\e005";
+}

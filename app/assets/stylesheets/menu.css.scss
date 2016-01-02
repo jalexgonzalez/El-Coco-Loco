@@ -7,7 +7,8 @@
     background: transparent;
     box-sizing: border-box;
     color: $coco-link-green;
-    height: 112px;
+    font-size: 16px;
+    height: 100px;
     text-align: center;
     display: block;
     padding: 4px;
@@ -18,18 +19,18 @@
     }
 
     .menu-icon {
-      font-size: 50px;
+      font-size: 40px;
     }
   }
 
   /* Custom, iPhone Retina */
   @media only screen and (min-width : 320px) {
     .menuItem {
-      height: 140px;
+      height: 120px;
       padding: 4px;
 
       .menu-icon {
-        font-size: 50px;
+        font-size: 40px;
       }
     }
   }
@@ -37,11 +38,11 @@
   /* Extra Small Devices, Phones */
   @media only screen and (min-width : 480px) {
     .menuItem {
-      height: 140px;
+      height: 120px;
       padding: 4px;
 
       .menu-icon {
-        font-size: 50px;
+        font-size: 40px;
       }
     }
   }
@@ -49,11 +50,11 @@
   /* Small Devices, Tablets */
   @media only screen and (min-width : 768px) {
     .menuItem {
-      height: 112px;
+      height: 100px;
       padding: 4px;
 
       .menu-icon {
-        font-size: 50px;
+        font-size: 40px;
       }
     }
   }
@@ -76,8 +77,8 @@
   }
 
   .item {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
     &:nth-child(odd) {
       clear: left;

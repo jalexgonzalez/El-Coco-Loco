@@ -4,8 +4,7 @@ angular.module('elCocoLocoApp')
 
     $scope.menu = menuPromise.data;
     $scope.menuCategories = menuPromise.data.map(function (menuItem) {
-      console.log(menuItem.type);
-      return menuItem.type;
+      return {name: menuItem.name, type: menuItem.type};
     });
 
     $('#topcontrol').addClass('visible');
