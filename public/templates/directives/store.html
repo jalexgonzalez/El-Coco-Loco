@@ -17,7 +17,10 @@
     <span ng-repeat="day in store.hours track by day.name">{{day.open}} AM - {{day.close}} PM Daily</span>
   </p>
 
-  <p class="contact">{{store.contact}}</p>
+  <p class="contact" ng-repeat="number in store.contact">
+    <span>{{number[0]}}</span>
+    <span>{{number[1]}}</span>
+  </p>
 
   <a class="btn btn-info center-block"
     target="_blank"

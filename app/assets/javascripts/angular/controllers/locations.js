@@ -38,7 +38,11 @@ angular.module('elCocoLocoApp')
             close: '10'
           }
         ],
-        contact: '',
+        contact: [
+          ['Food', '(305) 763-8974'],
+          ['Juices, Sandwiches, Breakfast', '(786) 216-7040'],
+          ['Ice Cream', '(305) 763-8618']
+        ],
         nowOpen: true
       },
       {
