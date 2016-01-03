@@ -82,6 +82,12 @@
 //   right: 0;
 // }
 
+  .highlights-wrapper .highlight {
+    h1 {
+      font-size: 30px;
+    }
+  }
+
   /* Custom, iPhone Retina */
   @media only screen and (min-width : 320px) {
     .highlights {
@@ -98,7 +104,7 @@
 
       .highlight {
         display: table;
-        height: 120px;
+        height: 80px;
         // background: $coco-green;
         // background-clip: content-box;
 
@@ -124,7 +130,7 @@
     }
 
     .highlights-wrapper .highlight {
-      height: 120px;
+      height: 100px;
     }
   }
 
@@ -135,7 +141,7 @@
     }
 
     .highlights-wrapper .highlight {
-      height: 160px;
+      height: 100px;
     }
   }
 }
